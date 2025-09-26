@@ -11,6 +11,10 @@
 - 强制战斗胜利/失败
 - 强制保存/读档
 
+<img src="./assets/Screenshot-general.png" width="500"/>
+
+<img src="./assets/Screenshot-battle.png" width="500"/>
+
 # Table of Contents
 
 - [RPG-Maker-MV-MZ-Cheat-UI-Plugin 插件汉化](#rpg-maker-mv-mz-cheat-ui-plugin-插件汉化)
