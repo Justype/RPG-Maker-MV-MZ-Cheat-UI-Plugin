@@ -17,7 +17,7 @@ export default {
             cols="12"
             md="8">
             <v-text-field
-                label="Search..."
+                label="搜索..."
                 solo
                 background-color="grey darken-3"
                 v-model="search"
@@ -33,7 +33,7 @@ export default {
             md="4">
             <key-input-field
                 v-model="shortcutSearch"
-                label="Shortcut"
+                label="快捷键"
                 solo
                 dense
                 background-color="grey darken-3"
@@ -48,11 +48,11 @@ export default {
         <v-checkbox
             class="d-inline-flex"
             v-model="hideDesc"
-            label="Hide Description Field">
+            label="隐藏描述">
         </v-checkbox>
         <v-tooltip
             bottom>
-            <span>Restore to default settings</span>
+            <span>恢复默认设置</span>
             <template v-slot:activator="{ on, attrs }">
                 <v-btn
                     color="green"
@@ -82,7 +82,7 @@ export default {
                 style="width: 170px;"
                 v-model="item.shortcut"
                 :deletable="!item.necessary"
-                label="No Shortcut"
+                label="未分配快捷键"
                 solo
                 dense
                 background-color="grey darken-3"
@@ -111,7 +111,7 @@ export default {
                     v-if="Object.keys(item.paramDesc).length > 0">
                     <v-card-subtitle
                         class="py-0 mb-1">
-                        Parameters
+                        参数
                     </v-card-subtitle>
                     <v-card-text
                         class="py-0 my-0 mb-1"
@@ -161,19 +161,19 @@ export default {
 
             tableHeaders: [
                 {
-                    text: 'Name',
+                    text: '名称',
                     value: 'name'
                 },
                 {
-                    text: 'Desc',
+                    text: '描述',
                     value: 'desc',
                 },
                 {
-                    text: 'Shortcut',
+                    text: '快捷键',
                     value: 'shortcut'
                 },
                 {
-                    text: 'Param',
+                    text: '参数',
                     value: 'param'
                 }
             ]

@@ -25,11 +25,11 @@ export default {
 
             headers: [
                 {
-                    text: 'Name',
+                    text: '名称',
                     value: 'name'
                 },
                 {
-                    text: 'Description',
+                    text: '描述',
                     value: 'desc'
                 }
             ]

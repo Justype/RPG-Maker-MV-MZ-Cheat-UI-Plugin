@@ -15,7 +15,7 @@ export default {
         :items-per-page="5">
         <template v-slot:top>
             <v-text-field
-                label="Search..."
+                label="搜索..."
                 solo
                 background-color="grey darken-3"
                 v-model="search"
@@ -33,7 +33,7 @@ export default {
                         v-model="excludeNameless"
                         dense
                         hide-details
-                        label="Hide Nameless Items">
+                        label="隐藏无名变量">
                     
                     </v-checkbox>
                 </v-col>
@@ -60,7 +60,7 @@ export default {
     
     <v-tooltip
         bottom>
-        <span>Reload from game data</span>
+        <span>重新加载游戏数据</span>
         <template v-slot:activator="{ on, attrs }">
             <v-btn
                 style="top: 0px; right: 0px;"
@@ -84,17 +84,17 @@ export default {
     data () {
         return {
             search: '',
-            excludeNameless: false,
+            excludeNameless: true,
 
             variableNames: [],
 
             tableHeaders: [
                 {
-                    text: 'Name',
+                    text: '变量名',
                     value: 'name'
                 },
                 {
-                    text: 'Value',
+                    text: '值',
                     value: 'value'
                 }
             ],

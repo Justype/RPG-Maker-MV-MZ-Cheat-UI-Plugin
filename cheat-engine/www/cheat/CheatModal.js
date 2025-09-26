@@ -29,12 +29,15 @@ export default {
         TranslateSettingsPanel
     },
 
+    // default  width="700" height="400"
+    // 为了适配手机屏幕，改为百分比宽高，但限制最大宽高
     template: `
 <v-card 
     dark
     class="z-index-cheat-0"
-    width="700" 
-    height="400">
+    width="90vw"
+    height="90vh"
+    style="max-width: 700px; max-height: 450px;">
     <v-row 
         class="fill-height ma-0 pa-0">
         <div
@@ -86,82 +89,82 @@ export default {
 
           navTreeItems: [
               {
-                  name: 'General',
+                  name: '常用',
                   icon: 'mdi-hammer-screwdriver',
                   component: 'general-panel'
               },
               {
-                  name: 'Shortcuts',
-                  icon: 'mdi-keyboard-outline',
-                  component: 'shortcut-panel'
-              },
-              {
-                  name: 'HP/MP/Battle',
+                  name: '战斗',
                   icon: 'mdi-battery-70',
                   component: 'health-setting-panel'
               },
               {
-                  name: 'Stats/Level',
+                  name: '等级/属性',
                   icon: 'mdi-sword-cross',
                   component: 'stats-setting-panel'
               },
               {
-                  name: 'Items',
+                  name: '物品',
                   icon: 'mdi-bag-personal-outline',
                   children: [
                       {
-                          name: 'Item',
+                          name: '道具',
                           icon: 'mdi-flask-empty-plus',
                           component: 'item-setting-panel'
                       },
                       {
-                          name: 'Weapon',
+                          name: '武器',
                           icon: 'mdi-sword',
                           component: 'weapon-setting-panel'
                       },
                       {
-                          name: 'Armor',
+                          name: '防具',
                           icon: 'mdi-shield-plus',
                           component: 'armor-setting-panel'
                       }
                   ]
               },
               {
-                  name: 'Clear States',
-                  icon: 'mdi-water-off',
-                  component: ''
-              },
-              {
-                  name: 'Variables',
+                  name: '变量',
                   icon: 'mdi-variable',
                   component: 'variable-setting-panel'
               },
               {
-                  name: 'Switches',
+                  name: '开关',
                   icon: 'mdi-toggle-switch',
                   component: 'switch-setting-panel'
               },
               {
-                  name: 'Save Locations',
+                  name: '保存/读取位置',
                   icon: 'mdi-map-marker-plus',
                   component: 'save-recall-panel'
               },
               {
-                  name: 'Teleport',
+                  name: '传送',
                   icon: 'mdi-run-fast',
                   component: 'teleport-panel'
               },
-              {
-                  name: 'Settings',
-                  icon: 'mdi-cog',
-                  children: [
-                      {
-                          name: 'Translate',
-                          icon: 'mdi-google-translate',
-                          component: 'translate-settings-panel'
-                      }
-                  ]
-              }
+                            {
+                  name: '快捷键',
+                  icon: 'mdi-keyboard-outline',
+                  component: 'shortcut-panel'
+              },
+            //   {
+            //       name: '清除状态',
+            //       icon: 'mdi-water-off',
+            //       component: ''
+            //   },
+            //   {
+            //       name: 'Settings',
+            //       icon: 'mdi-cog',
+            //       children: [
+            //           {
+            //               name: 'Translate',
+            //               icon: 'mdi-google-translate',
+            //               component: 'translate-settings-panel'
+            //           }
+            //       ]
+            //   }
           ]
       }
     },

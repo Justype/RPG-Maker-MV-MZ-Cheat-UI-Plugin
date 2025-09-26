@@ -55,15 +55,15 @@ export default {
         return {
             tableHeaders: [
                 {
-                    text: 'Name',
+                    text: '名字',
                     value: 'name',
                 },
                 {
-                    text: 'Hp',
+                    text: 'HP',
                     value: 'hp'
                 },
                 {
-                    text: 'Mp',
+                    text: 'MP',
                     value: 'mp'
                 }
             ],

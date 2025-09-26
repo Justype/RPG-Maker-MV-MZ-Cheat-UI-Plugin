@@ -48,7 +48,7 @@ export default {
         :items-per-page="5">
         <template v-slot:top>
             <v-text-field
-                label="Search..."
+                label="搜索..."
                 solo
                 background-color="grey darken-3"
                 v-model="search"
@@ -59,7 +59,7 @@ export default {
             </v-text-field>
             <v-checkbox
                 v-model="excludeFullPath"
-                label="Hide Full Path Field">
+                label="隐藏完整路径">
             </v-checkbox>
         </template>
         <template
@@ -70,7 +70,7 @@ export default {
             v-slot:item.actions="{ item, index }">
             <v-tooltip
                 bottom>
-                <span>Teleport</span>
+                <span>传送</span>
                 <template v-slot:activator="{ on, attrs }">
                 
                     <v-btn
@@ -95,25 +95,25 @@ export default {
             inputY: '0',
 
             search: '',
-            excludeFullPath: false,
+            excludeFullPath: true,
 
             maps: [],
 
             tableHeaders: [
                 {
-                    text: 'Id',
+                    text: 'ID',
                     value: 'id'
                 },
                 {
-                    text: 'Name',
+                    text: '名称',
                     value: 'name'
                 },
                 {
-                    text: 'FullPath',
+                    text: '完整路径',
                     value: 'fullPath'
                 },
                 {
-                    text: 'Actions',
+                    text: '操作',
                     value: 'actions'
                 }
             ]

@@ -1,14 +1,31 @@
+
+# RPG-Maker-MV-MZ-Cheat-UI-Plugin 插件汉化
+
+本仓库旨在提供[RPG-Maker-MV-MZ-Cheat-UI-Plugin](https://github.com/paramonos/RPG-Maker-MV-MZ-Cheat-UI-Plugin)的中文汉化版本
+
+常用功能：
+
+- 修改角色属性、金钱、物品、变量、开关等
+- 修改游戏速度 (x0.1 ~ x10)
+- 传送，保存位置，穿墙
+- 强制战斗胜利/失败
+- 强制保存/读档
+
+# Table of Contents
+
+- [RPG-Maker-MV-MZ-Cheat-UI-Plugin 插件汉化](#rpg-maker-mv-mz-cheat-ui-plugin-插件汉化)
+- [Table of Contents](#table-of-contents)
 - [RPG-Maker-MV-MZ-Cheat-UI-Plugin](#rpg-maker-mv-mz-cheat-ui-plugin)
 - [Intro](#intro)
-  * [UI Sample](#ui-sample)
-  * [Features](#features)
+  - [UI Sample](#ui-sample)
+  - [Features](#features)
 - [Set up](#set-up)
-  * [How to apply](#how-to-apply)
-  * [How to use](#how-to-use)
-  * [Apply same cheat settings from another game](#apply-same-cheat-settings-from-another-game)
+  - [How to apply](#how-to-apply)
+  - [How to use](#how-to-use)
+  - [Apply same cheat settings from another game](#apply-same-cheat-settings-from-another-game)
 - [Handling Errors](#handling-errors)
-  * [If embeded nwjs version of game is lower than 0.26.4](#if-embeded-nwjs-version-of-game-is-lower-than-0264)
-  * [If the error occurs after updating the cheat](#if-the-error-occurs-after-updating-the-cheat)
+  - [If embeded nwjs version of game is lower than 0.26.4](#if-embeded-nwjs-version-of-game-is-lower-than-0264)
+  - [If the error occurs after updating the cheat](#if-the-error-occurs-after-updating-the-cheat)
 
 
 
@@ -42,7 +59,7 @@
 - Force battle victory/defeat/escape/abort.
 - Supports useful customizable shortcuts.
     - Toggle save/load window, quick save/load, goto title, toggle no clip, editing party/enemy HP ...
-- Easy to find items, switched, variables, etc by searching text.
+- Easy to find items, switches, variables, etc by searching text.
 - Save location and recall, teleport cheats.
 - Supports developers tool.
 - Translate variables, switches, maps. (Needs [ezTransWeb](https://github.com/HelloKS/ezTransWeb) : Only supports for Korean.)

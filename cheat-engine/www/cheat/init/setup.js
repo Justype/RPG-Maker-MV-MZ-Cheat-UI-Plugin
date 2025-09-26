@@ -10,6 +10,10 @@ import MainComponent from '../MainComponent.js'
 
 // initialize vue
 new Vue({
-    vuetify: new Vuetify(),
+    vuetify: new Vuetify({
+        lang: {
+            current: 'zhHans',
+        }
+    }),
     components: { MainComponent }
 }).$mount('#app')

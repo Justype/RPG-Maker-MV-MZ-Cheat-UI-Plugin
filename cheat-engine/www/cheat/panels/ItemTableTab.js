@@ -13,7 +13,7 @@ export default {
         :items-per-page="5">
         <template v-slot:top>
             <v-text-field
-                label="Search..."
+                label="搜索..."
                 solo
                 background-color="grey darken-3"
                 v-model="search"
@@ -31,7 +31,7 @@ export default {
                         v-model="excludeNameless"
                         dense
                         hide-details
-                        label="Hide Nameless Items"
+                        label="隐藏无名物品"
                         @change="onTableFilterChange">
                     
                     </v-checkbox>
@@ -43,7 +43,7 @@ export default {
                         v-model="onlyOwnedItems"
                         dense
                         hide-details
-                        label="Only Owned Items"
+                        label="只显示拥有的物品"
                         @change="onTableFilterChange">
                     
                     </v-checkbox>
@@ -95,7 +95,7 @@ export default {
     data () {
         return {
             search: '',
-            excludeNameless: false,
+            excludeNameless: true,
             onlyOwnedItems: false,
             tableHeaders: [],
             tableItems: []
@@ -148,7 +148,7 @@ export default {
         initializeVariables () {
             this.tableHeaders = this.headers.slice(0)
             this.tableHeaders.push({
-                text: 'Amount',
+                text: '数量',
                 value: 'amount'
             })
 

@@ -112,8 +112,8 @@ export function isInValueInRange(value, lowerBound, upperBound) {
 // immutable
 const shortcutConfig = {
     toggleCheatModal: {
-        name: 'Toggle cheat window',
-        desc: 'Key mapping required',
+        name: '切换作弊窗口',
+        desc: '必须项',
         necessary: true,
         enterAction (param) {
             GeneralCheat.toggleCheatModal()
@@ -121,7 +121,7 @@ const shortcutConfig = {
     },
 
     toggleCheatModalToSaveLocationComponent: {
-        name: 'Toggle "Save Locations" tab',
+        name: '切换“保存位置”窗口',
         desc: '',
         enterAction (param) {
             GeneralCheat.toggleCheatModal('save-recall-panel')
@@ -129,12 +129,12 @@ const shortcutConfig = {
     },
 
     quickSave: {
-        name: 'Quick save',
-        desc: 'Quick save to certain slot',
+        name: '快速保存',
+        desc: '快速保存到指定槽',
         param: {
             slot: {
-                name: 'Slot',
-                desc: 'Slot for saved',
+                name: '存档槽',
+                desc: '保存的槽',
                 isInvalidValue (value) {
                     return isInValueInRange(value, 1, DataManager.maxSavefiles())
                 },
@@ -149,12 +149,12 @@ const shortcutConfig = {
     },
 
     quickLoad: {
-        name: 'Quick load',
-        desc: 'Quick load from certain slot',
+        name: '快速加载',
+        desc: '从指定存档快速加载',
         param: {
             slot: {
-                name: 'Slot',
-                desc: 'Slot for loaded',
+                name: '存档槽',
+                desc: '加载的槽',
                 isInvalidValue (value) {
                     return isInValueInRange(value, 1, DataManager.maxSavefiles())
                 },
@@ -169,7 +169,7 @@ const shortcutConfig = {
     },
 
     openSaveScene: {
-        name: 'Open save scene',
+        name: '打开存档页面',
         desc: '',
         enterAction (param) {
             SceneCheat.toggleSaveScene()
@@ -177,7 +177,7 @@ const shortcutConfig = {
     },
 
     openLoadScene: {
-        name: 'Open load scene',
+        name: '打开加载页面',
         desc: '',
         enterAction (param) {
             SceneCheat.toggleLoadScene()
@@ -185,7 +185,7 @@ const shortcutConfig = {
     },
 
     gotoTitle: {
-        name: 'Go to title',
+        name: '返回标题',
         desc: '',
         enterAction (param) {
             SceneCheat.gotoTitle()
@@ -193,7 +193,7 @@ const shortcutConfig = {
     },
 
     forceVictory: {
-        name: 'Force victory from battle',
+        name: '强制胜利',
         desc: '',
         enterAction (param) {
             BattleCheat.victory()
@@ -201,7 +201,7 @@ const shortcutConfig = {
     },
 
     forceDefeat: {
-        name: 'Force defeat from battle',
+        name: '强制失败',
         desc: '',
         enterAction (param) {
             BattleCheat.defeat()
@@ -209,7 +209,7 @@ const shortcutConfig = {
     },
 
     forceEscape: {
-        name: 'Force escape from battle',
+        name: '强制逃跑',
         desc: '',
         enterAction (param) {
             BattleCheat.escape()
@@ -217,7 +217,7 @@ const shortcutConfig = {
     },
 
     toggleNoClip: {
-        name: 'Toggle no clip',
+        name: '切换无碰撞（穿墙）',
         desc: '',
         enterAction (param) {
             GeneralCheat.toggleNoClip(true)
@@ -225,7 +225,7 @@ const shortcutConfig = {
     },
 
     enemyWound: {
-        name: 'Set enemies HP to 1',
+        name: '设置敌人 HP 为 1',
         desc: '',
         enterAction (param) {
             BattleCheat.changeAllEnemyHealth(1)
@@ -233,15 +233,15 @@ const shortcutConfig = {
     },
 
     enemyRecovery: {
-        name: 'Recover all enemies',
-        desc: 'Fill HP/MP to max',
+        name: '恢复所有敌人',
+        desc: '填充 HP/MP 到最大',
         enterAction (param) {
             BattleCheat.recoverAllEnemy()
         }
     },
 
     partyWound: {
-        name: 'Set party HP to 1',
+        name: '设置队伍 HP 为 1',
         desc: '',
         enterAction (param) {
             BattleCheat.changeAllPartyHealth(1)
@@ -249,20 +249,20 @@ const shortcutConfig = {
     },
 
     partyRecovery: {
-        name: 'Recover all party',
-        desc: 'Fill HP/MP to max',
+        name: '恢复所有己方成员',
+        desc: '填充 HP/MP 到最大',
         enterAction (param) {
             BattleCheat.recoverAllParty()
         }
     },
 
     setSpeed: {
-        name: 'Set speed',
-        desc: 'Set speed to certain value',
+        name: '设置速度',
+        desc: '设置速度为某个值',
         param: {
             speed: {
-                name: 'Speed',
-                desc: 'Speed for set',
+                name: '速度',
+                desc: '设置的速度（1-10）',
                 isInvalidValue (value) {
                     return isInValueInRange(value, 1, 10)
                 },
@@ -278,13 +278,13 @@ const shortcutConfig = {
     },
 
     skipMessage: {
-        name: 'Skip Message',
+        name: '跳过消息',
         desc: '',
         combiningKeyAlone: true,
         param: {
             accelerate: {
-                name: 'Accelerate game speed',
-                desc: 'Accelerate game speed while skipping message',
+                name: '加速游戏速度',
+                desc: '在跳过消息时加速游戏速度',
                 isInvalidValue (value) {
                     return isInValueInRange(value, 1, 50)
                 },
@@ -303,8 +303,8 @@ const shortcutConfig = {
     },
 
     openDevTool: {
-        name: 'Open dev tool',
-        desc: 'Open Chromium dev tool',
+        name: '打开开发者工具',
+        desc: '打开 Chromium 开发者工具',
         enterAction (param) {
             if (Utils.isNwjs()) {
                 require('nw.gui').Window.get().showDevTools()

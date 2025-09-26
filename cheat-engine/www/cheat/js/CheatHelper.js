@@ -56,7 +56,7 @@ export class GeneralCheat {
         $gamePlayer._through = !$gamePlayer._through
 
         if (notify) {
-            Alert.success(`No clip toggled: ${$gamePlayer._through}`)
+            Alert.success(`穿墙状态: ${$gamePlayer._through}`)
         }
     }
 
@@ -412,14 +412,14 @@ export class SceneCheat {
         $gameSystem.onBeforeSave()
         DataManager.saveGame(slot)
 
-        Alert.success(`Game saved to slot ${slot}`)
+        Alert.success(`保存进度到存档 ${slot}`)
     }
 
     static quickLoad (slot = 1) {
         DataManager.loadGame(slot)
         SceneManager.goto(Scene_Map)
 
-        Alert.success(`Game loaded from slot ${slot}`)
+        Alert.success(`从存档 ${slot} 加载游戏`)
     }
 }
 
@@ -435,7 +435,7 @@ export class BattleCheat {
             this.recover(member)
         }
 
-        Alert.success('Recovery all enemies')
+        Alert.success('恢复所有敌人的生命值')
     }
 
     static recoverAllParty () {
@@ -443,7 +443,7 @@ export class BattleCheat {
             this.recover(member)
         }
 
-        Alert.success('Recovery all party members')
+        Alert.success('恢复所有己方成员')
     }
 
     static fillTpAllEnemy () {
@@ -451,7 +451,7 @@ export class BattleCheat {
             member.setTp(member.maxTp())
         }
 
-        Alert.success('Fill TP all enemies')
+        Alert.success('补满所有敌人的TP')
     }
 
     static fillTpAllParty () {
@@ -459,7 +459,7 @@ export class BattleCheat {
             member.setTp(member.maxTp())
         }
 
-        Alert.success('Fill TP all party members')
+        Alert.success('补满所有己方成员的TP')
     }
 
     static changeAllEnemyHealth (newHp) {
@@ -467,7 +467,7 @@ export class BattleCheat {
             member.setHp(newHp)
         }
 
-        Alert.success(`HP ${newHp} for all enemies`)
+        Alert.success(`设定所有敌人HP为 ${newHp}`)
     }
 
     static changeAllPartyHealth (newHp) {
@@ -475,7 +475,7 @@ export class BattleCheat {
             member.setHp(newHp)
         }
 
-        Alert.success(`HP ${newHp} for all party members`)
+        Alert.success(`设定所有队员HP为 ${newHp}`)
     }
 
     static canExecuteBattleEndProcess () {
@@ -492,7 +492,7 @@ export class BattleCheat {
                 enemy.addNewState(enemy.deathStateId())
             })
             BattleManager.processVictory()
-            Alert.success('Forced victory from battle!')
+            Alert.success('强制胜利!')
             return true
         }
         return false
@@ -504,7 +504,7 @@ export class BattleCheat {
                 actor.addNewState(actor.deathStateId())
             })
             BattleManager.processDefeat()
-            Alert.success('Forced defeat from battle...')
+            Alert.success('强制失败...')
             return true
         }
         return false
@@ -516,7 +516,7 @@ export class BattleCheat {
             SoundManager.playEscape()
             BattleManager._escaped = true
             BattleManager.processEscape()
-            Alert.success('Forced escape from battle')
+            Alert.success('强制逃跑...')
             return true
         }
         return false
@@ -528,7 +528,7 @@ export class BattleCheat {
             SoundManager.playEscape()
             BattleManager._escaped = true
             BattleManager.processAbort()
-            Alert.success('Forced abort battle')
+            Alert.success('强制结束战斗')
             return true
         }
         return false

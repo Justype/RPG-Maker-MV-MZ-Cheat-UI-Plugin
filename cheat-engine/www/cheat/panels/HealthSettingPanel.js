@@ -12,7 +12,7 @@ export default {
 <v-card 
     class="ma-0 pa-0"
     flat>
-    <v-card-subtitle class="caption pb-0">Battle</v-card-subtitle>
+    <v-card-subtitle class="caption pb-0">战斗</v-card-subtitle>
     <v-card-text class="pt-0 pb-0">
         <v-checkbox
             v-model="disableRandomEncounter"
@@ -22,34 +22,34 @@ export default {
             class="my-0 py-0"
             @change="onDisableRandomEncounterChange">
             <template v-slot:label>
-                <span class="caption">Disable Random Encounter</span>
+                <span class="caption">禁用随机遇敌</span>
             </template>
         </v-checkbox>
-        <v-btn small @click.prevent="encounterBattle">Encounter</v-btn>
-        <v-btn small @click.prevent="victory">Victory</v-btn>
-        <v-btn small @click.prevent="defeat">Defeat</v-btn>
-        <v-btn small @click.prevent="escape">Escape</v-btn>
-        <v-btn small @click.prevent="abort">Abort</v-btn>
+        <v-btn small @click.prevent="encounterBattle">遇敌</v-btn>
+        <v-btn small @click.prevent="victory">胜利</v-btn>
+        <v-btn small @click.prevent="defeat">失败</v-btn>
+        <v-btn small @click.prevent="escape">逃跑</v-btn>
+        <v-btn small @click.prevent="abort">中止</v-btn>
     </v-card-text>
     
-    <v-card-subtitle class="caption pb-1">Enemy</v-card-subtitle>
+    <v-card-subtitle class="caption pb-1">敌人</v-card-subtitle>
     <v-card-text class="pt-0 pb-0">
-        <v-btn small @click.prevent="changeAllEnemyHealth(0)">Set 0</v-btn>
-        <v-btn small @click.prevent="changeAllEnemyHealth(1)">Set 1</v-btn>
-        <v-btn small @click.prevent="recoverAllEnemy">Recovery</v-btn>
-        <v-btn small @click.prevent="fillTpAllEnemy">Fill TP</v-btn>
+        <v-btn small @click.prevent="changeAllEnemyHealth(0)">HP 0</v-btn>
+        <v-btn small @click.prevent="changeAllEnemyHealth(1)">HP 1</v-btn>
+        <v-btn small @click.prevent="recoverAllEnemy">恢复</v-btn>
+        <v-btn small @click.prevent="fillTpAllEnemy">补满 TP</v-btn>
     </v-card-text>
     
-    <v-card-subtitle class="caption pb-1">Party</v-card-subtitle>
+    <v-card-subtitle class="caption pb-1">队伍</v-card-subtitle>
     <v-card-text class="pt-0 pb-0">
-        <v-btn small @click.prevent="changeAllPartyHealth(0)">Set 0</v-btn>
-        <v-btn small @click.prevent="changeAllPartyHealth(1)">Set 1</v-btn>
-        <v-btn small @click.prevent="recoverAllParty">Recovery</v-btn>
-        <v-btn small @click.prevent="fillTpAllParty">Fill TP</v-btn>
+        <v-btn small @click.prevent="changeAllPartyHealth(0)">HP 0</v-btn>
+        <v-btn small @click.prevent="changeAllPartyHealth(1)">HP 1</v-btn>
+        <v-btn small @click.prevent="recoverAllParty">恢复</v-btn>
+        <v-btn small @click.prevent="fillTpAllParty">补满 TP</v-btn>
     </v-card-text>
     
     <template v-if="enemy && enemy.length > 0">
-        <v-card-subtitle class="caption pb-1">Enemy Details</v-card-subtitle>
+        <v-card-subtitle class="caption pb-1">敌人详情</v-card-subtitle>
         <v-card-text class="pt-0 pb-0">
             <health-setting-tab
                 :items="enemy"
@@ -59,7 +59,7 @@ export default {
     </template>
     
     <template v-if="party && party.length > 0">
-        <v-card-subtitle class="caption pb-1">Party Details</v-card-subtitle>
+        <v-card-subtitle class="caption pb-1">队伍详情</v-card-subtitle>
         <v-card-text class="pt-0 pb-0">
             <health-setting-tab
                 :items="party"
@@ -70,7 +70,7 @@ export default {
     
     <v-tooltip
         bottom>
-        <span>Reload from game data</span>
+        <span>重新加载游戏数据</span>
         <template v-slot:activator="{ on, attrs }">
             <v-btn
                 style="top: 0px; right: 0px;"

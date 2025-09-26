@@ -6,11 +6,11 @@ export default {
 
     template: `
 <v-card flat class="ma-0 pa-0">
-    <v-card-subtitle class="ma-0 pa-0">Save Location</v-card-subtitle>
-    <span class="body-2 green--text text--darken-1">Map : {{currentMapName}}</span>
+    <v-card-subtitle class="ma-0 pa-0">保存当前位置</v-card-subtitle>
+    <span class="body-2 green--text text--darken-1">地图 : {{currentMapName}}</span>
     <v-text-field
         ref="locationAliasField"
-        label="Location Alias"
+        label="位置别名"
         solo
         background-color="grey darken-3"
         v-model="locationAliasInput"
@@ -21,7 +21,7 @@ export default {
         <template v-slot:append-outer>
             <v-tooltip
                 bottom>
-                <span>Save current location</span>
+                <span>保存当前位置</span>
                 <template v-slot:activator="{ on, attrs }">
                     <v-btn
                         class="mt-n1"
@@ -38,7 +38,7 @@ export default {
         </template>
     </v-text-field>
 
-    <v-card-subtitle class="ma-0 pa-0 mt-5">Recall Location</v-card-subtitle>
+    <v-card-subtitle class="ma-0 pa-0 mt-5">搜索保存的位置</v-card-subtitle>
     <v-data-table
         v-if="tableHeaders"
         class="mt-2"
@@ -50,7 +50,7 @@ export default {
         :items-per-page="5">
         <template v-slot:top>
             <v-text-field
-                label="Search..."
+                label="搜索..."
                 solo
                 background-color="grey darken-3"
                 v-model="search"
@@ -69,7 +69,7 @@ export default {
             
             <v-tooltip
                 bottom>
-                <span>Teleport</span>
+                <span>传送</span>
                 <template v-slot:activator="{ on, attrs }">
                     <v-btn
                         color="green"
@@ -86,7 +86,7 @@ export default {
             
             <v-tooltip
                 bottom>
-                <span>Delete location</span>
+                <span>删除</span>
                 <template v-slot:activator="{ on, attrs }">
                     <v-btn
                         color="red"
@@ -105,7 +105,7 @@ export default {
     
     <v-tooltip
         bottom>
-        <span>Reload from game data</span>
+        <span>重新加载游戏数据</span>
         <template v-slot:activator="{ on, attrs }">
             <v-btn
                 style="top: 0px; right: 0px;"
@@ -138,19 +138,19 @@ export default {
 
             tableHeaders: [
                 {
-                    text: 'Name',
+                    text: '别名',
                     value: 'name'
                 },
                 {
-                    text: 'Map',
+                    text: '地图名',
                     value: 'mapName'
                 },
                 {
-                    text: 'Coord',
+                    text: '坐标',
                     value: 'coord'
                 },
                 {
-                    text: 'Actions',
+                    text: '操作',
                     value: 'actions'
                 }
             ]
